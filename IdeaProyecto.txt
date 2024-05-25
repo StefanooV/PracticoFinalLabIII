@@ -3,6 +3,6 @@ Donde tendremos un encabezado con la seccion:
 ♠ Inicio
 ♠ Sobre Nosotros
 ♠ Productos, con menu desplegable de estos.
-
+♠ Probar poner max-width: 100% en imagen.
 En la seccion productos debemos enlazar la API donde el usuario podra buscar los productos que tenemos en stock.
 Además en caso de ser posible, al tocar en un determinado producto nos redirigimos a una nueva pagina con una descripcion mas detallada del producto, informacion y demas.
