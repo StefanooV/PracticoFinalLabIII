@@ -19,45 +19,110 @@
                         <li class="nav__item"><a href="#Inicio" class="nav__link">Inicio</a></li>
                         <li class="nav__item"><a href="sobreNosotros.html" class="nav__link">Sobre Nosotros</a></li>
                         <li class="nav__item"><a href="#Producto" class="nav__link">Productos</a></li>
+                        <li class="nav__item"><a href="#Contacto" class="nav__link">Contacto</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
-    <!--Main-->
+    <!--Main Seccion Inicio-->
     <main>
         <div class="contendor-main">
             <div class="contenedor-inicio">
-                <div class="inicio__overlay">
-
-                </div>
                 <section id="Inicio" class="seccion__inicio">
-                    <h1>Bienvenido a Perassi Multimarcas</h1>
-                    <p>Autos, motos, camionetas y más, al mejor precio del mercado. Usados y 0 km.</p>
+                    <h1>PERASSI multimarcas</h1>
+                    <p class="inicio__parrafo">Concesionaria de confianza, calidad garantizada.</p>
                 </section>
             </div>
-            <section id="Producto">
-                <h2>PRODUCTOS</h2>
-                <h3>Agregar un nuevo vehículo</h3>
-                <form>
-                    <input type="text" placeholder="Modelo de auto...">
-                    <input type="date" placeholder="Año de fabricación...">
-                    <input type="number" placeholder="Precio en pesos">
-                    <input type="number" placeholder="Precio en dolares">
-                </form>
-                <h3>Modificar un producto</h3>
-                <form>
-                    <input type="text" placeholder="ID del producto...">
-                    <input type="text" placeholder="Modelo de auto...">
-                    <input type="date" placeholder="Año de fabricación...">
-                    <input type="number" placeholder="Precio en pesos...">
-                    <input type="number" placeholder="Precio en dolares...">
-                </form>
-                <h3>Producto a eliminar</h3>
-                <input type="text" placeholder="Agregue el ID a eliminar...">
-            </section>
         </div>
     </main>
+    <!--Seccion Productos-->
+    <section class="form" id="Producto">
+        <h2 class="form__tittle">PRODUCTOS</h2>
+        <h3 class="form__subtittle">Agregar un nuevo vehículo</h3>
+        <form class= "form__agregar">
+            <div class="form__input-container">
+                <label>Modelo de auto:
+                    <input type="text" placeholder="Audi...">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Año de fabricación: 
+                    <inpput type="date" placeholder="2023...">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Precio en pesos: 
+                    <input type="number" placeholder="$ 4500000">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Precio en dolares: 
+                    <input type="number" placeholder="U$S 4500">
+                </label>
+            </div>
+        </form>
+        <h3 class="form__subtittle">Modificar un producto</h3>
+        <form class = "form__modificar">
+            <div class="form__input-container">
+                <label>ID del producto a Modificar
+                    <input type="text" placeholder="#001">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Modelo de auto:
+                    <input type="text" placeholder="Audi...">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Año de fabricación: 
+                    <inpput type="date" placeholder="2023...">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Precio en pesos: 
+                    <input type="number" placeholder="$4500000">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Precio en dolares: 
+                    <input type="number" placeholder="U$S 4500">
+                </label>
+            </div>
+        </form>
+        <h3 class="form__subtittle">Producto a eliminar</h3>
+        <form class="form__eliminar">
+            <div class="form__input-container">
+                <label>ID del producto a Modificar
+                    <input type="text" placeholder="#001">
+                </label>
+            </div>
+        </form>
+    </section>
+    <!--Seccion Contacto-->
+    <section class="contact" id="Contacto">
+        <h2 class="contact__tittle">Contacto</h2>
+        <form class="form__contact">
+            <div class="contact__input-container">
+                <label>Nombre Completo
+                    <input type="text" placeholder="Gala Vaudagna...">
+                </label>
+            </div>
+            <div class="contact__input-container">
+                <label>Email
+                    <input type="email" placeholder="miguel@example.com">
+                </label>
+            </div>
+            <div class="contact__input-container">
+                <label>Telefono
+                    <input type="number" placeholder="03406-15323232">
+                </label>
+            </div>
+            <div class="contact__input-container">
+                <textarea placeholder="Escriba su mensaje..."></textarea>
+            </div>
+        </form>
+    </section>
     <!--Pie de página-->
     <footer>
         <div class="contenedor__pie">
@@ -66,6 +131,7 @@
                     <li class="list__item"><a href="#Inicio" class="link__item">Inicio</a></li>
                     <li class="list__item"><a href="sobreNosotros.html" class="link__item">Sobre Nosotros</a></li>
                     <li class="list__item"><a href="#Producto" class="link__item">Productos</a></li>
+                    <li class="list__item"><a href="#Contacto" class="link__item">Contacto</a></li>
                 </ul>
             </div>
             <div class="contenedor__pie-derechos">

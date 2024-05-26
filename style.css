@@ -2,6 +2,7 @@
     margin: 0;
     font-family: sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 div, header, nav {
@@ -9,7 +10,8 @@ div, header, nav {
 }
 
 .contenedor-header {
-    background: radial-gradient(#100f0f,rgb(99, 22, 22));
+    background-color: #27292E;
+    
 }
 
 .nav {
@@ -28,13 +30,19 @@ div, header, nav {
 
 .nav__item {
     list-style: none;
-    padding: 0 28px;
+    padding: 0 38px;
+    font-size: 18px;
 }
 
 .nav__link {
     display: inline-block;
     text-decoration: none;
     color: #fff;
+}
+
+img {
+    width: 100px;
+    height: 100px;
 }
 
 .nav__logo-container { 
@@ -46,7 +54,7 @@ div, header, nav {
 .contenedor-inicio {
     min-height: 100vh;
     box-sizing: border-box;
-    background-image: url(background-image.jpg);
+    background-image: linear-gradient(#000a, #000a), url(background-img2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -55,16 +63,18 @@ div, header, nav {
 
 h1{
     margin: 0;
-    font-size: 3.2rem;
-    text-wrap: balance;
+    font-size: 4.2rem;
+    padding-bottom: 30px;
+    text-wrap: nowrap;
+    font-weight: bolder;
+    font-family: 'Times New Roman';
 }
-.inicio__overlay{
-    width: 100%;
-    height: 100vh;
-    background-color: #100f0f77;
-    position: absolute;
-    z-index: 1;
+.inicio__parrafo {
+    font-family: 'Times New Roman';
+    font-size: 1.75rem;
+    font-weight: 100;
 }
+
 
 .seccion__inicio {
     position: relative;
@@ -72,18 +82,18 @@ h1{
     margin: auto;
     text-align: center;
     max-width: 700px;
-    color: #231e21;
+    color: #d1d1d1;
 }
 
 .contenedor-inicio p {
     text-wrap: pretty;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 /* Seccion FOOTER */
 
 .contenedor__pie {
-    background: radial-gradient(#100f0f,rgb(99, 22, 22));
+    background-color: #27292E;
     color: #fff;
     box-sizing: border-box;
 }
@@ -98,7 +108,8 @@ h1{
 
 .list__item {
     list-style: none;
-    padding: 3px;
+    padding: 3px 6px;
+    font-size: 18px;
 }
 
 .link__item {
