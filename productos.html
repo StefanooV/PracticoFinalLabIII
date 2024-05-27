@@ -27,7 +27,7 @@
     <section class="form" id="Producto">
         <h2 class="form__tittle">PRODUCTOS</h2>
         <!--FORMULARIO AGREGAR INICIO-->
-        <form class= "form__form" id="formAgregar">
+        <form class= "form__form" id="formAgregar" action="javascript:none">
         <fieldset>
             <legend class="form__subtittle">Agregar un nuevo vehículo</legend>
             <div class="form__input-container">
@@ -37,34 +37,29 @@
             </div>
             <div class="form__input-container">
                 <label>Año de fabricación: 
-                    <input type="datetime" id="anio" placeholder="2023..." required>
+                    <input type="date" id="anio" placeholder="2023..." required>
                 </label>
             </div>
             <div class="form__input-container">
                 <label>Precio en pesos: 
-                    <input type="number" id="pesos" placeholder="$ 4500000" required>
+                    <input type="number" id="precioPesos" placeholder="$ 4500000" required>
                 </label>
             </div>
             <div class="form__input-container">
                 <label>Precio en dolares: 
-                    <input type="number" id="dolar" placeholder="U$S 4500" required>
+                    <input type="number" id="precioDolar" placeholder="U$S 4500" required>
                 </label>
             </div>
-            <div class="form__input-container">
-                <label>Imagen: 
-                    <input type="file" id="imagen" accept="image/*" required>
-                </label>
-            </div>
-
-            <button type="submit">Cargar vehículo</button>
+            <button onclick="CrearNuevoProducto()">Cargar vehículo</button>
         </fieldset>
         </form>
-        <div class="resultado"></div>
         <!--FORMULARIO AGREGAR FIN-->
 
         <!--FORMULARIO MODIFICAR INICIO-->
-        <form class = "form__form">
-            <fieldset>
+        <!--
+
+            <form class = "form__form">
+                <fieldset>
                 <legend class="form__subtittle">Modificar un producto</legend>
                 <div class="form__input-container">
                     <label>ID del producto a Modificar
@@ -106,6 +101,7 @@
             </fieldset>
         </form>
     </section>
+-->
     <footer>
         <div class="contenedor__pie">
             <div class="contenedor__pie-inicio">
