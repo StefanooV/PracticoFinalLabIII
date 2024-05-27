@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="contenedor-header">
+            <nav class="nav">
+                <div class="nav__logo-container">
+                    <a href="index.html"><img src="imgs/logo.png" alt="Logo" id="Inicio"></a>
+                </div>
+                <div class="nav__ul-container">
+                    <ul class="nav__ul">
+                        <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+                        <li class="nav__item"><a href="sobreNosotros.html" class="nav__link">Sobre Nosotros</a></li>
+                        <li class="nav__item"><a href="#Producto" class="nav__link">Productos</a></li>
+                        <li class="nav__item"><a href="index.html" class="nav__link">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="form" id="Producto">
+        <h2 class="form__tittle">PRODUCTOS</h2>
+        <!--FORMULARIO AGREGAR INICIO-->
+        <form class= "form__form" id="formAgregar">
+        <fieldset>
+            <legend class="form__subtittle">Agregar un nuevo vehículo</legend>
+            <div class="form__input-container">
+                <label>Modelo de auto:
+                    <input type="text" id="modelo" placeholder="Audi..." required>
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Año de fabricación: 
+                    <input type="datetime" id="anio" placeholder="2023..." required>
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Precio en pesos: 
+                    <input type="number" id="pesos" placeholder="$ 4500000" required>
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Precio en dolares: 
+                    <input type="number" id="dolar" placeholder="U$S 4500" required>
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Imagen: 
+                    <input type="file" id="imagen" accept="image/*" required>
+                </label>
+            </div>
+
+            <button type="submit">Cargar vehículo</button>
+        </fieldset>
+        </form>
+        <div class="resultado"></div>
+        <!--FORMULARIO AGREGAR FIN-->
+
+        <!--FORMULARIO MODIFICAR INICIO-->
+        <form class = "form__form">
+            <fieldset>
+                <legend class="form__subtittle">Modificar un producto</legend>
+                <div class="form__input-container">
+                    <label>ID del producto a Modificar
+                        <input type="text" placeholder="#001" required>
+                    </label>
+                </div>
+                <div class="form__input-container">
+                    <label>Modelo de auto:
+                        <input type="text" placeholder="Audi..." required>
+                    </label>
+                </div>
+                <div class="form__input-container">
+                    <label>Año de fabricación: 
+                        <input type="date" placeholder="2023..." required>
+                    </label>
+                </div>
+                <div class="form__input-container">
+                    <label>Precio en pesos: 
+                        <input type="number" placeholder="$4500000" required>
+                    </label>
+                </div>
+                <div class="form__input-container">
+                    <label>Precio en dolares: 
+                        <input type="number" placeholder="U$S 4500" required>
+                    </label>
+                </div>
+                <button type="submit">Modificar vehículo</button>
+            </fieldset>
+        </form>
+        <form class="form__form">
+            <fieldset>
+                <legend class="form__subtittle">Producto a eliminar</legend>
+                <div class="form__input-container">
+                    <label>ID del producto a Modificar
+                        <input type="text" placeholder="#001">
+                    </label>
+                </div>
+                <button type="submit">Eliminar vehículo</button>
+            </fieldset>
+        </form>
+    </section>
+    <footer>
+        <div class="contenedor__pie">
+            <div class="contenedor__pie-inicio">
+                <ul class="footer__ul">
+                    <li class="list__item"><a href="index.html" class="link__item">Inicio</a></li>
+                    <li class="list__item"><a href="sobreNosotros.html" class="link__item">Sobre Nosotros</a></li>
+                    <li class="list__item"><a href="#Producto" class="link__item">Productos</a></li>
+                    <li class="list__item"><a href="index.html" class="link__item">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="contenedor__pie-derechos">
+                <p>&copy; PERASSI Multimarcas - 2024. Todos los Derechos Reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
