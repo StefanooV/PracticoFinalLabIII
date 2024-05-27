@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perassi Autos</title>
+    <title>PERASSI multimarcas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -39,8 +39,9 @@
     <!--Seccion Productos-->
     <section class="form" id="Producto">
         <h2 class="form__tittle">PRODUCTOS</h2>
-        <h3 class="form__subtittle">Agregar un nuevo vehículo</h3>
-        <form class= "form__agregar">
+        <form class= "form__form">
+        <fieldset>
+            <legend class="form__subtittle">Agregar un nuevo vehículo</legend>
             <div class="form__input-container">
                 <label>Modelo de auto:
                     <input type="text" placeholder="Audi...">
@@ -48,7 +49,7 @@
             </div>
             <div class="form__input-container">
                 <label>Año de fabricación: 
-                    <inpput type="date" placeholder="2023...">
+                    <input type="date" placeholder="2023...">
                 </label>
             </div>
             <div class="form__input-container">
@@ -61,42 +62,47 @@
                     <input type="number" placeholder="U$S 4500">
                 </label>
             </div>
+        </fieldset>
         </form>
-        <h3 class="form__subtittle">Modificar un producto</h3>
-        <form class = "form__modificar">
-            <div class="form__input-container">
-                <label>ID del producto a Modificar
-                    <input type="text" placeholder="#001">
-                </label>
-            </div>
-            <div class="form__input-container">
-                <label>Modelo de auto:
-                    <input type="text" placeholder="Audi...">
-                </label>
-            </div>
-            <div class="form__input-container">
-                <label>Año de fabricación: 
-                    <inpput type="date" placeholder="2023...">
-                </label>
-            </div>
-            <div class="form__input-container">
-                <label>Precio en pesos: 
-                    <input type="number" placeholder="$4500000">
-                </label>
-            </div>
-            <div class="form__input-container">
-                <label>Precio en dolares: 
-                    <input type="number" placeholder="U$S 4500">
-                </label>
-            </div>
+        <form class = "form__form">
+            <fieldset>
+                <legend class="form__subtittle">Modificar un producto</legend>
+                <div class="form__input-container">
+                    <label>ID del producto a Modificar
+                        <input type="text" placeholder="#001">
+                    </label>
+                </div>
+                <div class="form__input-container">
+                    <label>Modelo de auto:
+                        <input type="text" placeholder="Audi...">
+                    </label>
+                </div>
+                <div class="form__input-container">
+                    <label>Año de fabricación: 
+                        <input type="date" placeholder="2023...">
+                    </label>
+                </div>
+                <div class="form__input-container">
+                    <label>Precio en pesos: 
+                        <input type="number" placeholder="$4500000">
+                    </label>
+                </div>
+                <div class="form__input-container">
+                    <label>Precio en dolares: 
+                        <input type="number" placeholder="U$S 4500">
+                    </label>
+                </div>
+            </fieldset>
         </form>
-        <h3 class="form__subtittle">Producto a eliminar</h3>
-        <form class="form__eliminar">
-            <div class="form__input-container">
-                <label>ID del producto a Modificar
-                    <input type="text" placeholder="#001">
-                </label>
-            </div>
+        <form class="form__form">
+            <fieldset>
+                <legend class="form__subtittle">Producto a eliminar</legend>
+                <div class="form__input-container">
+                    <label>ID del producto a Modificar
+                        <input type="text" placeholder="#001">
+                    </label>
+                </div>
+            </fieldset>
         </form>
     </section>
     <!--Seccion Contacto-->
