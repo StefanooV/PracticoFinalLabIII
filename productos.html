@@ -27,35 +27,39 @@
     <section class="form" id="Producto">
         <h2 class="form__tittle">PRODUCTOS</h2>
         <!--FORMULARIO AGREGAR INICIO-->
-        <form class= "form__form" id="formAgregar" action="javascript:none">
+        <form class= "form__form" id="formAgregar" action= "javascript:none">
         <fieldset>
             <legend class="form__subtittle">Agregar un nuevo vehículo</legend>
             <div class="form__input-container">
                 <label>Modelo de auto:
-                    <input type="text" id="modelo" placeholder="Audi..." required>
+                    <input type="text" id="titulo" placeholder="Audi...">
                 </label>
+                <div class="form__input-container">
+                    <label>Precio en pesos: 
+                        <input type="number" id="precioPesos" placeholder="$ 4500000">
+                    </label>
+                </div>
+                <div class="form__input-container">
+                    <label>Precio en dolares: 
+                        <input type="number" id="precioDolar" placeholder="U$S 4500" >
+                    </label>
+                </div>
             </div>
             <div class="form__input-container">
                 <label>Año de fabricación: 
-                    <input type="date" id="anio" placeholder="2023..." required>
+                    <input type="date" id="anio" placeholder="2023..." >
                 </label>
             </div>
-            <div class="form__input-container">
-                <label>Precio en pesos: 
-                    <input type="number" id="precioPesos" placeholder="$ 4500000" required>
-                </label>
-            </div>
-            <div class="form__input-container">
-                <label>Precio en dolares: 
-                    <input type="number" id="precioDolar" placeholder="U$S 4500" required>
-                </label>
-            </div>
-            <button onclick="CrearNuevoProducto()">Cargar vehículo</button>
+            <button type="submit"">Cargar vehículo</button>
         </fieldset>
         </form>
-        <div id="resultados">
 
-        </div>
+        <section id="Stock">
+            <div class="api-container">
+                <button onclick="ObtenerProductos()">Mostrar Productos</button>
+                <div class="resultados" id="resultados"></div>
+            </div>
+        </section>
         <!--FORMULARIO AGREGAR FIN-->
 
         <!--FORMULARIO MODIFICAR INICIO-->
