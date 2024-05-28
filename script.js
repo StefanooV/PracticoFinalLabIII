@@ -1,36 +1,37 @@
 const apiUrl = "https://api.yumserver.com/16695/products";
 
-async function getStock () {
-    try {
-        const response = await fetch(apiUrl);
-        const vehiculos = await response.json();
-
-        console.log(vehiculos);
-
-    } catch (error) {
-        console.error(error);
-    }
+//Obtener todos los productos
+function ObtenerProductos(){
+    fetch(apiUrl)
+    .then(response => response.json())
+    .then(MostrarProductos)
+    .catch(error => console.error('Error: ', error ));
 }
-getStock();
+
 
 function MostrarProductos (productos) {
     let html = ``;
     for (let i = 0; i < productos.length; i++) {
-        let mostrarProductos = productos[i];
         html += `
-            <div class= "productos-container">               
-                <h2>Modelo: ${mostrarProductos[i].modelo}</h2>
-                <span>Año de Fabricacion ${mostrarProductos[i].anio}</span>
-                <span>Precio pesos: ${mostrarProductos[i].precioPesos} </span>
-                <span>Precio Dolar: ${mostrarProductos[i].precioDolar}</span>
+            <div class= "producto-card">
+                <img src="imgs/imagen-auto.png" alt="Card Image" class="producto__logo">               
+                <div class = "producto__info"
+                    <ul class = "producto__list">
+                        <li class="producto__item">IDcod: ${productos[i].idcod}</li>
+                        <li class="producto__item">Modelo: ${productos[i].modelo}</li>
+                        <li class="producto__item">Año de Fabricacion ${productos[i].anio}</li>
+                        <li class="producto__item">Precio pesos: ${productos[i].precioPesos}</li>
+                        <li class="producto__item">Precio Dolar: ${productos[i].precioDolar}</li>
+                    </ul>
+                </div>
             </div>
         `
     }
 
-    document.body.innerHTML = html
-
+    document.getElementById('resultados').innerHTML = html;
 }
 
+window.onload = ObtenerProductos;
 
 
 function CrearNuevoProducto(){
@@ -46,12 +47,13 @@ function CrearNuevoProducto(){
         body: JSON.stringify(producto)
     })
     .then(response => response.text())
-    .then( function (data) { 
-            if (data.trim() == 'OK'){
+    .then( 
+        function (texto) { 
+            if (texto.trim() == 'OK'){
                 alert('Se creo el producto con exito');
             }
             else {
-                alert(data);
+                alert(texto);
             }
         }
     )
