@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -29,32 +30,34 @@
         
         <!--Agregar un Nuevo vehículo-->
         <h3>Agregar un nuevo vehículo</h3>
-        <form class= "form__form" id="formAgregar">
+        <form class= "form__form" action="javascript:none">
             <div class="form__input-container">
                 <label>Modelo de auto:
-                    <input type="text" name="titulo" id="titulo" placeholder="Audi...">
+                    <input type="text" id="titulo" placeholder="Audi">
                 </label>
-                <div class="form__input-container">
-                    <label>Precio en pesos: 
-                        <input type="number" name = "precioPesos" id="precioPesos" placeholder="$ 4500000">
-                    </label>
-                </div>
-                <div class="form__input-container">
-                    <label>Precio en dolares: 
-                        <input type="number" name="precioDolar" id="precioDolar" placeholder="U$S 4500">
-                    </label>
-                </div>
+            </div>
+            <div class="form__input-container">
+                <label>Precio en pesos: 
+                    <input type="number" id="precioPeso" placeholder="Agregue el precio en pesos">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Precio en dolares: 
+                    <input type="number" id="precioDolar" placeholder="Agregue el precio en dolares">
+                </label>
             </div>
             <div class="form__input-container">
                 <label>Año de fabricación: 
-                    <input type="date" id="fecha" name="fecha" placeholder="2023">
+                    <input type="date" id="fecha">
                 </label>
             </div>
-            <button type="submit" id="btnAgregar">Cargar vehículo</button>
+            <button onclick="CrearNuevoProducto()">Cargar vehículo</button>
         </form>
 
+        
         <!--Modificar Nuevo vehículo-->
-        <h3>Modificar un producto</h3>
+        <!--
+            <h3>Modificar un producto</h3>
         <form class = "form__form">
             <div class="form__input-container">
                 <label>ID del producto a Modificar
@@ -84,24 +87,27 @@
             <button type="submit">Modificar vehículo</button>
         </form>
 
-        <!--Eliminar un vehículo-->
-        <h3>Eliminar un vehículo</h3> 
-        <form class="form__form">
-            <div class="form__input-container">
-                <label>ID del producto a Modificar
-                    <input type="text" placeholder="#001">
-                </label>
-            </div>
-            <button type="submit">Eliminar vehículo</button>
-        </form>
-    </section>
-    
-    <section id="Stock">
-    </section>
-        <h2 class="stock__tittle">Stock</h2>
-        <div id="respuestaAgregar">
+        Eliminar un vehículo-->
+        <!--
 
+            <h3>Eliminar un vehículo</h3> 
+            <form class="form__form">
+                <div class="form__input-container">
+                    <label>ID del producto a Modificar
+                        <input type="text" placeholder="#001">
+                    </label>
+                </div>
+                <button type="submit">Eliminar vehículo</button>
+            </form>
+        </section>
+        -->
+    <section id="Stock">
+        <h2 class="stock__tittle">Stock</h2>
+        <button onclick="ObtenerProductos()">Mostrar Stock</button>
+        <div id="respuestaAgregar">
+            
         </div>
+    </section>
     <footer>
         <div class="contenedor__pie">
             <div class="contenedor__pie-inicio">
@@ -117,6 +123,5 @@
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
