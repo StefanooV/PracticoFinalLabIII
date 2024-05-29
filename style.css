@@ -137,6 +137,18 @@ h1{
     box-sizing: border-box;
 }
 
+.form h3 {
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 12px 0;
+}
+
+.form h3:hover {
+    color: #399976;
+    transition: 0.8s;
+}
+
 .form__tittle {
     padding-bottom: 50px;
     font-size: 2.5rem;
@@ -180,11 +192,6 @@ input {
     border-radius: 5px;
     margin-top: 10px;
     color: #fff;
-}
-fieldset {
-    border-radius: 5px;
-    border: 1px solid #27292E;
-    padding: 6px 12px;
 }
 
 button {

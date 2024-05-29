@@ -1,89 +1,62 @@
+const apiUrl = 'https://api.yumserver.com/16695/products';
 
-        const apiUrl = "https://api.yumserver.com/16695/products";
+async function mostrarVehiculos() {
+    try {
+        const response1 = await fetch(apiUrl);
+        const vehiculos = await response1.json();
+        console.log(vehiculos);
+    } 
+    catch(error) {
+        console.error('Error', error);
+    }
 
-        //fetch(apiUrl)
-        //    .then(response => response.json())
-        //    .then(data => console.log(data))
-        //    .catch(error => console.error('Error:', error));
+}
 
-        //GET
-        function ObtenerProductos(){
-            fetch(apiUrl)
-            .then(response => response.json())
-            .then(productos => {
-                console.log(productos)
-                MostrarProductos(productos);
-            })
-            .catch(error => console.error('Error: ', error ));
-        }
+mostrarVehiculos();
 
-        //MOSTRAR
-        function MostrarProductos (productos) {
-            let html = ``;
-            for (let i = 0; i < productos.length; i++) {
-                if (productos.length == 0) {
-                    html = `<p>No hay productos disponibles.</p>`;
-                } 
-                else {
-                    console.log(productos[i])
-                    html += `
-                        <div>        
-                            <div>
-                                <ul>
-                                    <li> IDcod: ${productos[i].idcod}</li>
-                                    <li> Modelo: ${productos[i].titulo}</li>
-                                    <li> Precio pesos: ${productos[i].precioPesos}</li>
-                                    <li> Precio Dolar: ${productos[i].precioDolar}</li>
-                                    <li> Año de Fabricacion ${productos[i].anio}</li>
-                                </ul>
-                            </div>
-                        </div>
-                    `;
-                }
-            }
-            document.getElementById('resultados').innerHTML = html;
-        }
-        ObtenerProductos();
+//Extraccion de datos de formulario
 
-        //POST
-        function CrearNuevoProducto(event) {
-            event.preventDefault(); 
-        
-            let producto = {
-                titulo: document.getElementById('titulo').value,
-                precioPesos: document.getElementById('precioPesos').value,
-                precioDolar: document.getElementById('precioDolar').value,
-                fecha: document.getElementById('anio').value,
-            };
-        
-            console.log("Producto a enviar:", producto);
-        
-            fetch(apiUrl, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(producto)
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.text();
-            })
-            .then(texto => { 
-                console.log("Respuesta de la API:", texto); 
-                if (texto.trim() === 'OK') {
-                    alert('Se creó el producto con éxito');
-                } else {
-                    alert(texto);
-                }
-            })
-            .catch(error => {
-                console.error('Error: ', error);
-                alert('Error al crear el producto. Verifica la consola para más detalles.');
-            });
-        }
+const btnAgregar = document.querySelector('#btnAgregar');
+const formAgregar = document.querySelector('#formAgregar');
+const respuestaAgregar = document.querySelector('#respuestaAgregar');
 
-        document.getElementById('formAgregar').addEventListener('submit', CrearNuevoProducto);
+//Funcion para sacar los datos del form
+const obtenerDatos = () => {
+    const datos = new FormData(formAgregar);
+    const datosProcesados = Object.fromEntries(datos.entries());
+    formAgregar.reset();
+    return datosProcesados;  
+}
+
+const cargarDatos = async () => {
     
+    const nuevoVehiculo = obtenerDatos();
 
+    try {
+        const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers:{'Content-Type': 'application/json'},
+            body: JSON.stringify(nuevoVehiculo)
+        });
+        if(response.ok){
+            const jsonResponse = await response.json();
+            const {titulo, precioPesos, precioDolar, fecha} = jsonResponse;
+            respuestaAgregar.innerHTML = `
+            <ul>
+                <li>${titulo}</li>
+                <li>${precioPesos}</li>
+                <li>${precioDolar}</li>
+                <li>${fecha}</li>
+            </ul>
+            `
+        }
+    } 
+    catch (error) {
+        console.error('Error: ', error);
+    }
+}
 
+btnAgregar.addEventListener('click', (event) => {
+    event.preventDefault();
+    cargarDatos();
+})

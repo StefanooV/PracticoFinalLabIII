@@ -16,9 +16,9 @@
                 <div class="nav__ul-container">
                     <ul class="nav__ul">
                         <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
-                        <li class="nav__item"><a href="sobreNosotros.html" class="nav__link">Sobre Nosotros</a></li>
+                        <li class="nav__item"><a href="index.html" class="nav__link">Sobre Nosotros</a></li>
                         <li class="nav__item"><a href="#Producto" class="nav__link">Productos</a></li>
-                        <li class="nav__item"><a href="index.html" class="nav__link">Stock</a></li>
+                        <li class="nav__item"><a href="#Stock" class="nav__link">Stock</a></li>
                     </ul>
                 </div>
             </nav>
@@ -26,97 +26,90 @@
     </header>
     <section class="form" id="Producto">
         <h2 class="form__tittle">PRODUCTOS</h2>
-        <!--FORMULARIO AGREGAR INICIO-->
-        <form class= "form__form" id="formAgregar" action= "javascript:none">
-        <fieldset>
-            <legend class="form__subtittle">Agregar un nuevo vehículo</legend>
+        
+        <!--Agregar un Nuevo vehículo-->
+        <h3>Agregar un nuevo vehículo</h3>
+        <form class= "form__form" id="formAgregar">
             <div class="form__input-container">
                 <label>Modelo de auto:
-                    <input type="text" id="titulo" placeholder="Audi...">
+                    <input type="text" name="titulo" id="titulo" placeholder="Audi...">
                 </label>
                 <div class="form__input-container">
                     <label>Precio en pesos: 
-                        <input type="number" id="precioPesos" placeholder="$ 4500000">
+                        <input type="number" name = "precioPesos" id="precioPesos" placeholder="$ 4500000">
                     </label>
                 </div>
                 <div class="form__input-container">
                     <label>Precio en dolares: 
-                        <input type="number" id="precioDolar" placeholder="U$S 4500" >
+                        <input type="number" name="precioDolar" id="precioDolar" placeholder="U$S 4500">
                     </label>
                 </div>
             </div>
             <div class="form__input-container">
                 <label>Año de fabricación: 
-                    <input type="date" id="anio" placeholder="2023..." >
+                    <input type="date" id="fecha" name="fecha" placeholder="2023">
                 </label>
             </div>
-            <button type="submit"">Cargar vehículo</button>
-        </fieldset>
+            <button type="submit" id="btnAgregar">Cargar vehículo</button>
         </form>
 
-        <section id="Stock">
-            <div class="api-container">
-                <button onclick="ObtenerProductos()">Mostrar Productos</button>
-                <div class="resultados" id="resultados"></div>
+        <!--Modificar Nuevo vehículo-->
+        <h3>Modificar un producto</h3>
+        <form class = "form__form">
+            <div class="form__input-container">
+                <label>ID del producto a Modificar
+                    <input type="text" placeholder="#001" required>
+                </label>
             </div>
-        </section>
-        <!--FORMULARIO AGREGAR FIN-->
-
-        <!--FORMULARIO MODIFICAR INICIO-->
-        <!--
-
-            <form class = "form__form">
-                <fieldset>
-                <legend class="form__subtittle">Modificar un producto</legend>
-                <div class="form__input-container">
-                    <label>ID del producto a Modificar
-                        <input type="text" placeholder="#001" required>
-                    </label>
-                </div>
-                <div class="form__input-container">
-                    <label>Modelo de auto:
-                        <input type="text" placeholder="Audi..." required>
-                    </label>
-                </div>
-                <div class="form__input-container">
-                    <label>Año de fabricación: 
-                        <input type="date" placeholder="2023..." required>
-                    </label>
-                </div>
-                <div class="form__input-container">
-                    <label>Precio en pesos: 
-                        <input type="number" placeholder="$4500000" required>
-                    </label>
-                </div>
-                <div class="form__input-container">
-                    <label>Precio en dolares: 
-                        <input type="number" placeholder="U$S 4500" required>
-                    </label>
-                </div>
-                <button type="submit">Modificar vehículo</button>
-            </fieldset>
+            <div class="form__input-container">
+                <label>Modelo de auto:
+                    <input type="text" placeholder="Audi..." required>
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Año de fabricación: 
+                    <input type="date" placeholder="2023..." required>
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Precio en pesos: 
+                    <input type="number" placeholder="$4500000" required>
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Precio en dolares: 
+                    <input type="number" placeholder="U$S 4500" required>
+                </label>
+            </div>
+            <button type="submit">Modificar vehículo</button>
         </form>
+
+        <!--Eliminar un vehículo-->
+        <h3>Eliminar un vehículo</h3> 
         <form class="form__form">
-            <fieldset>
-                <legend class="form__subtittle">Producto a eliminar</legend>
-                <div class="form__input-container">
-                    <label>ID del producto a Modificar
-                        <input type="text" placeholder="#001">
-                    </label>
-                </div>
-                <button type="submit">Eliminar vehículo</button>
-            </fieldset>
+            <div class="form__input-container">
+                <label>ID del producto a Modificar
+                    <input type="text" placeholder="#001">
+                </label>
+            </div>
+            <button type="submit">Eliminar vehículo</button>
         </form>
     </section>
--->
+    
+    <section id="Stock">
+    </section>
+        <h2 class="stock__tittle">Stock</h2>
+        <div id="respuestaAgregar">
+
+        </div>
     <footer>
         <div class="contenedor__pie">
             <div class="contenedor__pie-inicio">
                 <ul class="footer__ul">
                     <li class="list__item"><a href="index.html" class="link__item">Inicio</a></li>
-                    <li class="list__item"><a href="sobreNosotros.html" class="link__item">Sobre Nosotros</a></li>
+                    <li class="list__item"><a href="index.html" class="link__item">Sobre Nosotros</a></li>
                     <li class="list__item"><a href="#Producto" class="link__item">Productos</a></li>
-                    <li class="list__item"><a href="index.html" class="link__item">Stock</a></li>
+                    <li class="list__item"><a href="#Stock" class="link__item">Stock</a></li>
                 </ul>
             </div>
             <div class="contenedor__pie-derechos">
