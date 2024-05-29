@@ -8,19 +8,23 @@ function ObtenerProductos(){
     .catch(error => console.error('Error: ', error ));
 }
 
+
 //MOSTRAR
 function MostrarProductos (productos) {
     let html = ``;
     for (let i = 0; i < productos.length; i++) {
             console.log(productos[i])
             html += `
-                <ul>
-                    <li><b>IDcod: ${productos[i].idcod}</b></li>
-                    <li><b>Modelo: ${productos[i].titulo}</b></li>
-                    <li>Precio en pesos: ${productos[i].precioPeso}</li>
-                    <li>Precio en dolares${productos[i].precioDolar}</li>
-                    <li>Fecha de emisión: ${productos[i].fecha}</li>
-                </ul>
+                <div class="form__card">
+                    <img src="imgs/imagen-auto.png" class="stock__logo">
+                    <ul>
+                        <li><b>IDcod: ${productos[i].idcod}</b></li>
+                        <li><b>Modelo: ${productos[i].titulo}</b></li>
+                        <li>Precio en pesos: ${productos[i].precioPeso}</li>
+                        <li>Precio en dolares: ${productos[i].precioDolar}</li>
+                        <li>Fecha de emisión: ${productos[i].fecha}</li>
+                    </ul>
+                </div>
             `;
     }
     document.getElementById('respuestaAgregar').innerHTML = html;
@@ -53,6 +57,5 @@ function CrearNuevoProducto() {
     )
     .catch(error => console.error('Error: ', error));
 }
-
 
 
