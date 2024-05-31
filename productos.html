@@ -51,65 +51,63 @@
                     <input type="date" id="fecha">
                 </label>
             </div>
-            <button onclick="CrearNuevoProducto()">Cargar vehículo</button>
+            <button type ="button" onclick="CrearNuevoProducto()">Cargar vehículo</button>
+        </form>
+        
+        <!--Modificar Nuevo vehículo-->
+        <h3>Modificar un producto</h3>
+        <form class = "form__form">
+            <div class="form__input-container">
+                <label>ID del producto a Modificar
+                    <select id="idModificar"></select>
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Modelo de auto:
+                    <input type="text" placeholder="Corolla" id="NuevoTitulo">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Precio en pesos: 
+                    <input type="number" placeholder="$4500000" id="nuevoPrecioPesos">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Precio en dolares: 
+                    <input type="number" placeholder="U$S 4500" id="nuevoPrecioDolar">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Año de fabricación: 
+                    <input type="date" id="nuevaFecha">
+                </label>
+            </div>
+            <button type ="button" onclick="Modificar()">Modificar vehículo</button>
+        </form>
+
+        <h3>Eliminar un vehículo</h3> 
+        <form class="form__form">
+            <div class="form__input-container">
+                <label>ID del producto a Eliminar
+                    <select id="idEliminar"></select>
+                </label>
+            </div>
+            <button type ="button" onclick="Borrar()">Eliminar vehículo</button>
         </form>
     </section>
     <section class="stock">
         <h2 class="stock__tittle">Stock</h2>
         <button onclick="ObtenerProductos()" class="stock__btn">Mostrar Stock</button>
-        <div class="stock__flex-container">
-            <div id="respuestaAgregar" class="stock__respuestas">
-                
-            </div>
+        <div id="respuestaAgregar" class="stock__respuestas">
+
+        </div>
+        <div id="respuestaModificar" class="stock__respuestas">
+
         </div>
     </section>
 
-        
-        <!--Modificar Nuevo vehículo-->
-        <!--
-            <h3>Modificar un producto</h3>
-        <form class = "form__form">
-            <div class="form__input-container">
-                <label>ID del producto a Modificar
-                    <input type="text" placeholder="#001" required>
-                </label>
-            </div>
-            <div class="form__input-container">
-                <label>Modelo de auto:
-                    <input type="text" placeholder="Audi..." required>
-                </label>
-            </div>
-            <div class="form__input-container">
-                <label>Año de fabricación: 
-                    <input type="date" placeholder="2023..." required>
-                </label>
-            </div>
-            <div class="form__input-container">
-                <label>Precio en pesos: 
-                    <input type="number" placeholder="$4500000" required>
-                </label>
-            </div>
-            <div class="form__input-container">
-                <label>Precio en dolares: 
-                    <input type="number" placeholder="U$S 4500" required>
-                </label>
-            </div>
-            <button type="submit">Modificar vehículo</button>
-        </form>
 
-        Eliminar un vehículo-->
-        <!--
-
-            <h3>Eliminar un vehículo</h3> 
-            <form class="form__form">
-                <div class="form__input-container">
-                    <label>ID del producto a Modificar
-                        <input type="text" placeholder="#001">
-                    </label>
-                </div>
-                <button type="submit">Eliminar vehículo</button>
-            </form>
-        -->
+        <!--Eliminar un vehículo-->
     <footer>
         <div class="contenedor__pie">
             <div class="contenedor__pie-inicio">

@@ -205,6 +205,8 @@ h1{
 .stock {
     background-color: #1d1d1d;
     min-height: 80vh;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .stock__tittle {
@@ -219,28 +221,51 @@ h1{
     min-width: 40%;
     margin-left: 30%;
 }
-
+.stock__respuestas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
 .form__card {
-    width: 300px;
-    height: 280px;
-    background-color: #303237;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    margin: 5px;
+    background-color: #333539;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 950px;
+    max-width: 90%;
+}
+
+.stock__logo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-right: 1px solid #fff;
+    padding: 8px;
+    border-radius: 15px;
 }
 
 .form__card ul {
     list-style: none;
-    padding: 10px;
-    font-family: sans-serif;
+    margin: 0;
     font-size: 1rem;
+    flex: 1;
+    font-family: Tahoma;
 }
-.form__card ul li {
-    padding: 8px;
+.form__card li {
     text-decoration: none;
-    color: #fff;
+    color: #fbf3f3;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
 }
-
+.form__card li strong {
+    color: #9c9d9b;
+    font-weight: bolder;
+}
 /* Seccion FOOTER */
 
 .contenedor__pie {
