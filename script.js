@@ -70,9 +70,10 @@ function CrearNuevoProducto() {
 
 //PATCH
 function Modificar(){
-    
     var id = document.getElementById('idModificar').value;
+    
     let productoModificado = {
+        idcod: id,
         titulo: document.getElementById('NuevoTitulo').value, 
         precioPeso: document.getElementById('nuevoPrecioPesos').value,
         precioDolar: document.getElementById('nuevoPrecioDolar').value,
@@ -104,6 +105,9 @@ function Borrar(){
         fetch(`${urlBase}/${idb}`, {
             method: 'DELETE',
             headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                idcod: idb
+            })
         })
         .then(response=>response.text())
         .then(function(texto){
