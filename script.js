@@ -29,6 +29,7 @@ function MostrarProductos (productos) {
                         <li><strong>Precio en pesos:</strong> ${productos[i].precioPeso}</li>
                         <li><strong>Precio en dolares:</strong> ${productos[i].precioDolar}</li>
                         <li><strong>Fecha de emisión:</strong> ${productos[i].fecha}</li>
+                        <li><button class="form__btn-borrar" onclick="Borrar('${productos[i].idcod}')">Eliminar Vehículo</button></li>
                     </ul>
                 </div>
             `;
@@ -36,7 +37,6 @@ function MostrarProductos (productos) {
     }
     document.getElementById('respuestaAgregar').innerHTML = html;
     document.getElementById('idModificar').innerHTML = options;
-    document.getElementById('idEliminar').innerHTML = options;
 }
 
 //POST
@@ -98,15 +98,13 @@ function Modificar(){
 }
 
 //DELETE
-function Borrar(){
-    var idb = document.getElementById('idEliminar').value;
-
+function Borrar(_idcod){
     if(confirm("Esta seguro que desea eliminar el vehículo")){
-        fetch(`${urlBase}/${idb}`, {
+        fetch(urlBase, {
             method: 'DELETE',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
-                idcod: idb
+                idcod: _idcod
             })
         })
         .then(response=>response.text())

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -57,9 +56,9 @@
         <!--Modificar Nuevo vehículo-->
         <h3>Modificar un producto</h3>
         <form class = "form__form" action="javascript:void(0)">
-            <div class="form__input-container">
+            <div class="form__select-container">
                 <label>Seleccione el ID del vehículo a Modificar
-                    <select id="idModificar"></select>
+                    <select id="idModificar" class="form__select"></select>
                 </label>
             </div>
             <div class="form__input-container">
@@ -84,17 +83,9 @@
             </div>
             <button type ="button" onclick="Modificar()">Modificar vehículo</button>
         </form>
-
-        <h3>Eliminar un vehículo</h3> 
-        <form class="form__form">
-            <div class="form__input-container">
-                <label>Seleccione el ID del vehículo a Eliminar
-                    <select id="idEliminar"></select>
-                </label>
-            </div>
-            <button type ="button" onclick="Borrar()">Eliminar vehículo</button>
-        </form>
+        
     </section>
+    <!--SECCIÓN STOCK-->
     <section class="stock">
         <h2 class="stock__tittle">Stock</h2>
         <button onclick="ObtenerProductos()" class="stock__btn">Mostrar Stock</button>
@@ -105,9 +96,6 @@
 
         </div>
     </section>
-
-
-        <!--Eliminar un vehículo-->
     <footer>
         <div class="contenedor__pie">
             <div class="contenedor__pie-inicio">
@@ -124,4 +112,6 @@
         </div>
     </footer>
 </body>
+
+<script src="script.js"></script>
 </html>
