@@ -26,10 +26,9 @@
     </header>
     <section class="form" id="Producto">
         <h2 class="form__tittle">PRODUCTOS</h2>
-        
         <!--Agregar un Nuevo vehículo-->
         <h3>Agregar un nuevo vehículo</h3>
-        <form class= "form__form" action="javascript:none">
+        <form action="javascript:none" class= "form__form">
             <div class="form__input-container">
                 <label>Modelo de auto:
                     <input type="text" id="titulo" placeholder="Audi">
@@ -50,12 +49,12 @@
                     <input type="date" id="fecha">
                 </label>
             </div>
-            <button type ="button" onclick="CrearNuevoProducto()">Cargar vehículo</button>
+            <button onclick="CrearNuevoProducto()">Agregar vehículo</button>
         </form>
         
         <!--Modificar Nuevo vehículo-->
         <h3>Modificar un producto</h3>
-        <form class = "form__form" action="javascript:void(0)">
+        <form class = "form__form">
             <div class="form__select-container">
                 <label>Seleccione el ID del vehículo a Modificar
                     <select id="idModificar" class="form__select"></select>
@@ -111,7 +110,6 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
-
-<script src="script.js"></script>
 </html>
