@@ -81,12 +81,12 @@ function Modificar(){
         fecha: document.getElementById('nuevaFecha').value,
     };
 
-    fetch(`${urlBase}/${id}`, {
+    fetch(urlBase, {
         method: 'PATCH',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(productoModificado)
     })
-    .then(response=>response.text)
+    .then(response=>response.text())
     .then(function(texto){
         if(texto.trim() == "OK"){
             alert("Se a modificado correctamente el vehiculo");
