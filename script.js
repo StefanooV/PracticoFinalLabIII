@@ -1,4 +1,4 @@
-    const urlBase = "https://api.yumserver.com/16695/products";
+const urlBase = "https://api.yumserver.com/16695/products";
 
 //Mostrar apenas se abre
 //document.addEventListener('DOMContentLoaded', () => {
@@ -59,7 +59,6 @@ function CrearNuevoProducto() {
         function (texto){  
             if (texto.trim() == "OK") {
                 alert('Se creó el producto con éxito');
-                ObtenerProductos();
             } 
             else {
                 alert(texto);
@@ -90,8 +89,7 @@ function Modificar(){
     .then(response=>response.text)
     .then(function(texto){
         if(texto.trim() == "OK"){
-            alert("Se a modificado correctamente el vehiculo")
-            ObtenerProductos();
+            alert("Se a modificado correctamente el vehiculo");
         } else {
             alert(texto);
         }
@@ -112,8 +110,8 @@ function Borrar(_idcod){
         .then(response=>response.text())
         .then(function(texto){
             if(texto.trim() == "OK"){
-                alert('Vehículo eliminado con exito')
-                ObtenerProductos()
+                alert('Vehículo eliminado con exito');
+                ObtenerProductos();
             }
             else {
                 alert(texto)
