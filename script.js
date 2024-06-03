@@ -46,7 +46,7 @@ function CrearNuevoProducto() {
         titulo: document.getElementById('titulo').value,
         precioPeso: document.getElementById('precioPeso').value,
         precioDolar: document.getElementById('precioDolar').value,
-        fecha: document.getElementById('fecha').value,
+        fecha: document.getElementById('fecha').value
     };
 
     fetch(urlBase ,{
