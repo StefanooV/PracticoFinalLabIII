@@ -1,9 +1,9 @@
 const urlBase = "https://api.yumserver.com/16695/products";
 
-//Mostrar apenas se abre
-//document.addEventListener('DOMContentLoaded', () => {
-//    ObtenerProductos();
-//});
+//Mostrar apenas se Abre
+document.addEventListener('DOMContentLoaded', () => {
+    ObtenerProductos();
+});
 
 //GET
 function ObtenerProductos(){
@@ -33,7 +33,7 @@ function MostrarProductos (productos) {
                     </ul>
                 </div>
             `;
-            options += `<option value ="${productos[i].idcod}">${productos[i].idcod}</option>`;
+            options += `<option value ="${productos[i].idcod}">${productos[i].titulo}</option>`;
     }
     document.getElementById('respuestaAgregar').innerHTML = html;
     document.getElementById('idModificar').innerHTML = options;

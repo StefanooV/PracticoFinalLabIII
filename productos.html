@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="contenedor-header">
+            <input type="checkbox" class="header__checkbox" id="menu-toggle">
             <nav class="nav">
                 <div class="nav__logo-container">
                     <a href="index.html"><img src="imgs/logo.png" alt="Logo" id="Inicio"></a>
                 </div>
+                <label for="menu-toggle" class="nav__menu-container">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </label>
                 <div class="nav__ul-container">
                     <ul class="nav__ul">
-                        <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
-                        <li class="nav__item"><a href="index.html" class="nav__link">Sobre Nosotros</a></li>
+                        <li class="nav__item"><a href="index.html#Inicio" class="nav__link">Inicio</a></li>
+                        <li class="nav__item"><a href="index.html#SobreNosotros" class="nav__link">Sobre Nosotros</a></li>
                         <li class="nav__item"><a href="#Producto" class="nav__link">Productos</a></li>
                         <li class="nav__item"><a href="#Stock" class="nav__link">Stock</a></li>
                     </ul>
@@ -84,7 +89,7 @@
         </form>
     </section>
     <!--SECCIÓN STOCK-->
-    <section class="stock">
+    <section class="stock" id="Stock">
         <h2 class="stock__tittle">Stock</h2>
         <button onclick="ObtenerProductos()" class="stock__btn">Mostrar Stock</button>
         <div id="respuestaAgregar" class="stock__respuestas">
