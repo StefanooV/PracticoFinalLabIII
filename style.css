@@ -271,7 +271,7 @@ h1{
     }
     .service__item {
         width: 100%;
-        max-width: 300px;
+        max-width: 300px;   
     }
 }
 
@@ -391,7 +391,9 @@ h1{
 }
 
 
-/*Seccion Stock*/
+
+/*--------------STOCK SECTION-----------------*/
+
 .stock {
     background-color: #1d1d1d;
     min-height: 80vh;
@@ -413,6 +415,8 @@ h1{
     gap: 20px;
     padding: 20px;
     justify-content: center;
+    container-type: inline-size;
+    container-name: stock__respuestas;
 }
 .form__card {
     background-color: #333539;
@@ -470,6 +474,27 @@ h1{
 }
 
 
+/*--------------STOCK QUERIES-----------------*/
+
+@container stock__respuestas (max-width: 600px){
+    .form__card {
+        flex-direction: column;
+        height: auto;
+    }
+    .stock__logo {
+        width: 80%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #fffa;
+    }
+    .form__card ul {
+        padding: 20px;
+    }
+    .form__card li {
+        justify-content: flex-start;
+        padding-right: 0;
+    }
+}
 
 
 
