@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat';
+    font-family: 'Work Sans';
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -123,19 +123,24 @@ img {
     background-size: cover;
     display: flex;
 }
-
+h1 span {
+    font-family: 'Roboto Slab';
+    font-weight: 500;
+    font-size: 4.2rem;
+}
 h1{
     margin: 0;
-    font-size: 4.2rem;
-    padding-bottom: 30px;
+    font-size: 3.6rem;
+    padding-bottom: 10px;
     text-wrap: wrap;
-    font-weight: bolder;
-    font-family: 'Times New Roman';
+    font-weight: 400;
+    font-family: 'Work Sans';
 }
 .inicio__parrafo {
-    font-family: 'Times New Roman';
-    font-size: 1.75rem;
+    font-family: 'Work Sans';
+    font-size: 1.6rem;
     font-weight: 100;
+    letter-spacing: 0.5rem;
 }
 
 
@@ -165,9 +170,15 @@ h1{
 
 .sobreNosotros-tittle {
     text-align: center;
-    font-family: 'Montserrat';
-    font-size: 2.6rem;
+    font-family: 'Work Sans';
+    font-size: 2.5rem;
     margin-bottom: 30px;
+}
+.sobreNosotros-subtittle {
+    font-weight: 900;
+}
+.timeline__content p {
+    font-size: 18px;
 }
 
 .timeline {
@@ -206,7 +217,7 @@ h1{
     justify-content: center;
     align-items: center;
     margin-right: 20px;
-    font-size: 24px;
+    font-size: 26px;
     
 }
 
@@ -235,7 +246,7 @@ h1{
 }
 
 .service__item {
-    font-family: 'Montserrat';
+    font-family: 'Work Sans';
     font-size: 16px;
     background-color: #212225;
     padding: 20px;
@@ -276,11 +287,11 @@ h1{
 }
 
 
+/*-------------------SOBRE NOSOTROS SECTION----------------------*/
 
-/* Seccion PRODUCTOS */
 .form {
     padding-top: 80px;
-    font-family: 'Times New Roman';
+    font-family: 'Work Sans';
     background-color: #1d1d1d;
     color: #fff;
     box-sizing: border-box;
@@ -288,9 +299,10 @@ h1{
 
 .form h3 {
     font-size: 1.5rem;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Work Sans';
     text-align: center;
     padding: 12px 0;
+    margin-bottom: 8px;
 }
 
 .form h3:hover {
@@ -299,16 +311,12 @@ h1{
 }
 
 .form__tittle {
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     font-size: 2.5rem;
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Roboto Slab';
 }
 
-.form__subtittle {
-    font-size: 1.2rem;
-    padding: 0 6px;
-}
 
 .form__form {
     padding: 6px 12px;
@@ -329,8 +337,8 @@ h1{
 
 
 .form label {
-    font-family: Arial;
-    font-size: 1.1rem;
+    font-family: 'Work Sans';
+    font-size: 1.2rem;
     line-height: 2.5;
 }
 
@@ -352,7 +360,9 @@ h1{
     background-color: #33373f;
     color: #fff;
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 1px;
     text-align: center;
     margin: 15px;
     margin-left: 25%;
@@ -398,14 +408,14 @@ h1{
     background-color: #1d1d1d;
     min-height: 80vh;
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Work Sans';
 }
 
 .stock__tittle {
     color: #fff;
     text-align: center;
-    padding: 80px 0;
-    font-family: 'Times New Roman', Times, serif;
+    padding: 60px 0;
+    font-family: 'Roboto Slab';
     font-size: 2.5rem;
 }
 
@@ -446,7 +456,7 @@ h1{
     margin: 0;
     font-size: 1rem;
     flex: 1;
-    font-family: Tahoma;
+    font-family: 'Work Sans';
 }
 .form__card li {
     text-decoration: none;
@@ -459,6 +469,7 @@ h1{
 .form__card li strong {
     color: #9c9d9b;
     font-weight: bolder;
+    font-size: 1.1rem;
 }
 
 .form__btn-borrar {
@@ -469,8 +480,9 @@ h1{
     border: none;
     border: 1px solid #fff;
     font-size: 1.2rem;
-    font-family: Tahoma;
+    font-family: 'Work Sans';
     margin-top: 18px;
+    font-weight: 500;
 }
 
 
