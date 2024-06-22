@@ -170,8 +170,9 @@ h1{
 
 .sobreNosotros-tittle {
     text-align: center;
-    font-family: 'Work Sans';
-    font-size: 2.5rem;
+    font-family: 'Roboto Slab';
+    font-size: 2.6rem;
+    line-height: 3;
     margin-bottom: 30px;
 }
 .sobreNosotros-subtittle {
@@ -284,6 +285,106 @@ h1{
         width: 100%;
         max-width: 300px;   
     }
+}
+
+
+/*-------------------CONTACTO SECTION----------------------*/
+.contacto {
+    background-color: #212225;
+    color: #fff;
+    padding: 50px 0;
+    container-type: inline-size;
+    container-name: contacto;
+}
+
+.contacto__container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contacto h2 {
+    font-size: 2.6rem;
+    font-family: 'Roboto Slab';
+    text-align: center;
+    padding: 50px 0;
+}
+
+.filaContacto {
+    display: flex;
+}
+.colContacto {
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+
+.colContacto input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 12px;
+    background-color: transparent;
+    font-family: 'Work Sans';
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    border: 2px solid #9c9d9b;
+    border-radius: 5px;
+}
+.colContacto button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #9c9d9b;
+    width: fit-content;
+    display: block;
+    margin: 10px auto;
+    padding: 10px 22px;
+    border-radius: 5px;
+    color: #fff;
+    position: relative;
+    font-family: 'Work Sans';
+    font-weight: 500;
+    z-index: 10;
+}
+
+.colContacto button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #399976;
+    z-index: -1;
+    transition: .8s;
+}
+
+.colContacto button:hover .overlay {
+    width: 100%;
+}
+
+
+.colContacto textarea {
+    resize: none;
+}
+
+.colContacto img {
+    width: 100%;
+    height: auto;
+    border: 3px solid #fff;
+    border-radius: 5px;
+}
+
+
+
+/*-------------------CONTACTO QUERIES----------------------*/
+
+@container contacto (max-width: 750px){
+    .filaContacto {
+        display: block;
+    } 
+    .colContacto {
+        width: 100%;
+    }
+    
 }
 
 
@@ -510,28 +611,57 @@ h1{
 
 
 
-/* Seccion FOOTER */
+/*--------------FOOTER SECTION-----------------*/
 
-.contenedor__pie {
-    background-color: #27292E;
-    color: #fff;
-    box-sizing: border-box;
-    margin-top: auto;
-}
-
-.contenedor__pie-inicio{
-    text-align: start;
+.footer {
     background-color: #33373f;
+    color: #fff;
+    padding: 20px 0;    
+    font-family: 'Work Sans';
 }
+.contenedor__pie {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.filaFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.colFooter {
+    width: 45%;
+    padding: 10px;
+}
+
+.footer__ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__ul li {
+    margin: 10px 0;
+}
+
 .contenedor__pie-derechos {
     text-align: center;
     padding: 10px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
 }
 
 .list__item {
     list-style: none;
     padding: 3px 6px;
-    font-size: 16px;
+    font-size: 1.2rem;
+}
+
+.list__item i {
+    padding-right: 10px;
+    font-size: 1.4rem;
 }
 
 .link__item {
@@ -539,8 +669,16 @@ h1{
     color: #fff;
 }
 
+.link__item:hover {
+    text-decoration: underline;
+}
 
-
+.formSubtittle {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Roboto Slab';
+}
 
 
 
